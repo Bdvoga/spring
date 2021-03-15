@@ -19,4 +19,8 @@
 
     <bean id="route" class="com.ex1.Route"/>
 
+    <bean id="itemService" class="com.ex2.ItemService"/>
+
+    <bean id="itemDAO" class="com.ex2.ItemDAO"/>
+
 </beans>
