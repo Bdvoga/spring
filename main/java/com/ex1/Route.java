@@ -6,6 +6,17 @@ public class Route {
     String id;
     List<Step> steps;
 
+    public Route(String id, List<Step> steps) {
+        this.id = id;
+        this.steps = steps;
+    }
+
+    //    public Route() {
+//        this.id = "330";
+//        assert false;
+//        this.steps.add(new Step());
+//    }
+
     public String getId() {
         return id;
     }

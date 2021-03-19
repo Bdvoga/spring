@@ -13,14 +13,41 @@
 
     <bean id="orderDAO" class="com.ex.OrderDAO"/>
 
-    <bean id="service" class="com.ex1.Service"/>
+    <bean id="service" class="com.ex1.Service">
+        <constructor-arg index="0" value="100"/>
+        <constructor-arg index="1" value="name1"/>
+        <constructor-arg index="2">
+            <list>
+                <value>"XxXx"</value>
+            </list>
+        </constructor-arg>
+    </bean>
 
-    <bean id="step" class="com.ex1.Step"/>
+    <bean id="step" class="com.ex1.Step">
+        <constructor-arg index="0" value="202"/>
+        <constructor-arg index="1" ref="service"/>
+        <constructor-arg index="2" ref="service"/>
+        <constructor-arg index="3">
+            <map>
+                <entry key="1" value="one"/>
+            </map>
+        </constructor-arg>
+        <constructor-arg index="4">
+            <map>
+                <entry key="2" value="two"/>
+            </map>
+        </constructor-arg>
+    </bean>
 
-    <bean id="route" class="com.ex1.Route"/>
+    <bean id="route" class="com.ex1.Route">
+        <constructor-arg index="0" value="330"/>
+        <constructor-arg index="1" ref="step">
+        </constructor-arg>
+    </bean>
 
     <bean id="itemService" class="com.ex2.ItemService"/>
 
     <bean id="itemDAO" class="com.ex2.ItemDAO"/>
+
 
 </beans>

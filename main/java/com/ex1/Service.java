@@ -7,6 +7,12 @@ public class Service {
     private String name;
     private List<String> paramsToCall;
 
+    public Service(Long id, String name, List<String> paramsToCall) {
+        this.id = id;
+        this.name = name;
+        this.paramsToCall = paramsToCall;
+    }
+
     public Long getId() {
         return id;
     }
