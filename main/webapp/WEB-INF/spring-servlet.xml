@@ -10,7 +10,6 @@
     <context:component-scan base-package="com"/>
 
     <bean id="orderService" class="com.ex.OrderService"/>
-
     <bean id="orderDAO" class="com.ex.OrderDAO"/>
 
     <bean id="service" class="com.ex1.Service">
@@ -48,6 +47,5 @@
     <bean id="itemService" class="com.ex2.ItemService"/>
 
     <bean id="itemDAO" class="com.ex2.ItemDAO"/>
-
 
 </beans>

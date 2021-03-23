@@ -11,12 +11,6 @@ public class Route {
         this.steps = steps;
     }
 
-    //    public Route() {
-//        this.id = "330";
-//        assert false;
-//        this.steps.add(new Step());
-//    }
-
     public String getId() {
         return id;
     }

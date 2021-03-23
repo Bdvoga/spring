@@ -26,7 +26,7 @@ public class ItemController {
     }
 
     //Delete
-    @RequestMapping(method = RequestMethod.GET, value = "/itemDelete/{id}", produces = "text/plain")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/itemDelete/{id}", produces = "text/plain")
     public @ResponseBody String delete(@PathVariable Long id) throws Exception {
         itemService.delete(id);
 
@@ -34,7 +34,7 @@ public class ItemController {
     }
 
     //Create
-    @RequestMapping(method = RequestMethod.GET,
+    @RequestMapping(method = RequestMethod.POST,
             value = "/itemSave",
             produces = "text/plain",
             params = {"name", "desc"})
@@ -53,7 +53,7 @@ public class ItemController {
     }
 
     //Update
-    @RequestMapping(method = RequestMethod.GET,
+    @RequestMapping(method = RequestMethod.PUT,
             value = "/itemUpdate",
             produces = "text/plain",
             params = {"id", "name", "desc"})

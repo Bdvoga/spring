@@ -81,7 +81,7 @@ public class ItemDAO {
         Item item = session.get(Item.class, id);
         session.close();
 
-        return item;
+        return null;
     }
 
     public SessionFactory createSessionFactory() {
